@@ -4,18 +4,21 @@
 // import "./App.css";
 import Hello from "./components/Hello";
 import Fruits from "./components/Fruits";
+import Count from "./components/Counter";
 
 function App() {
-  const person = {
-    name: "Trust.",
-    message: "Hello , ",
-    message2: "Welcome Aboard",
-  };
+  const people = [
+    { name: "Trust.", message: "Hello , " },
+    { name: "Boye.", message: "Welcome , " },
+    { name: "Emmanuel.", message: "Thank you , " },
+    { name: "Danilo.", message: "Hi 👋, " },
+  ];
 
   return (
     <div>
-      <Hello person={person} />
+      <Hello person={people} />
       <Fruits />
+      <Count />
     </div>
   );
 }

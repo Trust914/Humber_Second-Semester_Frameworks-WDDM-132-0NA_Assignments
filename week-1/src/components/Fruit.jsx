@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export default function Fruit({ fruitObj }) {
   return (
     <tr>

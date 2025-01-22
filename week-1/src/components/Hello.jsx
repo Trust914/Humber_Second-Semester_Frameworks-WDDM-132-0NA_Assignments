@@ -1,12 +1,21 @@
+import { useState } from "react";
+
+/* eslint-disable react/prop-types */
 const Hello = ({ person }) => {
+  const [personIndex, setPersonIndex] = useState(0);
+  function handleChangePerson() {
+    setPersonIndex((prevIndex) =>
+      prevIndex === person.length - 1 ? 0 : prevIndex + 1
+    );
+  }
   return (
     <div>
       <h1>
-        {person.message} {person.name}
+        {person.length > 0 
+          ? `${person[personIndex].message} ${person[personIndex].name}`
+          : "No person to show!"}
       </h1>
-      <h2>
-        {person.message2}
-      </h2>
+      <button onClick={handleChangePerson}>Change Person</button>
     </div>
   );
 };
