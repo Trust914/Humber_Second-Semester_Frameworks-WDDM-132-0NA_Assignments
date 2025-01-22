@@ -5,6 +5,8 @@
 import Hello from "./components/Hello";
 import Fruits from "./components/Fruits";
 import Count from "./components/Counter";
+import Form from "./components/Form";
+import BreakPoint from "./components/BreakPoint";
 
 function App() {
   const people = [
@@ -17,8 +19,13 @@ function App() {
   return (
     <div>
       <Hello person={people} />
+      <BreakPoint/>
       <Fruits />
+      <BreakPoint/>
       <Count />
+      <BreakPoint/>
+      <Form />
+      <BreakPoint/>
     </div>
   );
 }
